@@ -40,14 +40,8 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-Запустите сервер:
-
-```sh
-python manage.py runserver
-```
-
-
 Примените миграции:
+
 ```sh
 python manage.py migrate
 ```
