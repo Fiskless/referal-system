@@ -34,7 +34,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
         inviter = CustomUser.objects.filter(
             invite_code=code
         ).first()
-        if not inviter:
+        if code and not inviter:
             raise serializers.ValidationError(
                 {code: "Такого инвайт-кода не существует"})
         invite_code = get_random_string(length=6)

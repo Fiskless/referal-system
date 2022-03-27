@@ -19,8 +19,7 @@ class AuthCodeView(generics.CreateAPIView):
         authenticate(phone=logged_in_user.phone)
         resp = {'phone': str(logged_in_user.phone),
                 'another_invite_code': logged_in_user.another_invite_code,
-                'invite_code': logged_in_user.invite_code,
-                'invited_users': logged_in_user.invited_users}
+                'invite_code': logged_in_user.invite_code}
         return Response(resp)
 
 
