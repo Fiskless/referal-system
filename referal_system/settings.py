@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'phonenumber_field',
+    'djoser',
 ]
 
 MIDDLEWARE = [
@@ -109,10 +110,18 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
+            'rest_framework.authentication.TokenAuthentication',
             'rest_framework.authentication.BasicAuthentication',
             'rest_framework.authentication.SessionAuthentication',
         ]
 }
+
+DJOSER = {
+    'SERIALIZERS': {
+         'user_create': 'api.serializers.UserRegistrationSerializer'
+    }
+}
+
 
 
 # Internationalization
