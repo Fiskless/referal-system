@@ -1,0 +1,39 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres:12.0-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgresql-data:/var/lib/postgresql/data
+    env_file:
+      - .env
+
+  django_ref_syst:
+    image: fiskless/referal_system
+    command: bash -c "python /code/manage.py migrate --noinput && python /code/manage.py collectstatic --noinput &&  gunicorn appointment_assistant_project.wsgi:application --bind 127.0.0.1:8000"
+    volumes:
+      - static_volume:/code/static
+      - media_volume:/code/media
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    depends_on:
+      - postgresql
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 1337:80
+    volumes:
+      - static_volume:/opt/static
+      - media_volume:/opt/media
+    depends_on:
+      - django_ref_syst
+
+
+volumes:
+  postgresql-data:
+  static_volume:
+  media_volume:

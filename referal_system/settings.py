@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'referal_system.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': env.dj_db_url("POSTGRES_DB_URL")
+    'default': env.dj_db_url("POSTGRES_DB_URL", 'postgres://referal_system:referal_system@ocalhost:5432/referal_system')
 }
 
 # Password validation

@@ -52,6 +52,14 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+### Инструкция по запуску через Docker
+
+Запустите базу данных и сайт
+
+```shell-session
+$ docker-compose up
+```
+
 ### Переменные окружения
 
 Часть настроек проекта берётся из переменных окружения. 
@@ -62,7 +70,7 @@ python manage.py runserver
 - `DEBUG` — дебаг-режим. Поставьте True, чтобы увидеть отладочную информацию в случае ошибки.
 - `SECRET_KEY` — секретный ключ проекта
 - `ALLOWED_HOSTS` - адреса, на которых будет обслуживаться сайт
-- `POSTGRES_DB_URL` - URL, в котором содержатся данные о БД, которые распарсятся с [помощью](https://github.com/sloria/environs#usage-with-django)
+- `POSTGRES_DB_URL` - URL вида postgres://username:password@host:port/db_name, в котором содержатся данные о БД, которые распарсятся с [помощью](https://github.com/sloria/environs#usage-with-django)
 
 ## Документация по API
 
