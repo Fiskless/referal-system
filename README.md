@@ -70,7 +70,7 @@ $ docker-compose up
 - `DEBUG` — дебаг-режим. Поставьте True, чтобы увидеть отладочную информацию в случае ошибки.
 - `SECRET_KEY` — секретный ключ проекта
 - `ALLOWED_HOSTS` - адреса, на которых будет обслуживаться сайт
-- `POSTGRES_DB_URL` - URL вида postgres://username:password@host:port/db_name, в котором содержатся данные о БД, которые распарсятся с [помощью](https://github.com/sloria/environs#usage-with-django)
+- `POSTGRES_DB_URL` - URL вида `postgres://username:password@host:port/db_name`, в котором содержатся данные о БД, которые распарсятся с [помощью](https://github.com/sloria/environs#usage-with-django)
 
 ## Документация по API
 
