@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'phonenumber_field',
-    'djoser',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +120,6 @@ DJOSER = {
          'user_create': 'api.serializers.UserRegistrationSerializer'
     }
 }
-
 
 
 # Internationalization

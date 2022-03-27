@@ -3,7 +3,7 @@
 API для реферальной системы
 
 ## Демо-версия сайта
-Демо-версия сайта расположена на бесплатном хостинге [heroku.com](https://meeting-website.herokuapp.com/)
+Демо-версия сайта расположена на бесплатном хостинге [heroku.com](https://referal-system-fiskless.herokuapp.com/)
 Для тестирования возможностей: логин - `fiskless`, пароль - `Asdfgh12345@`
 
 
